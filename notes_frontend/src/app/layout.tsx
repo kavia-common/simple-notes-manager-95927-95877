@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Minimal Next.js App",
-  description: "Ultra-minimal Next.js application",
+  title: "Notes",
+  description: "A simple, modern notes application.",
+  applicationName: "Notes",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -13,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+      <body className="min-h-screen">
         {children}
       </body>
     </html>
